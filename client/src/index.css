@@ -58,14 +58,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  min-width: 320px;
-  background: #f7f3ee;
-  color: #26323a;
-  font-family: 'DM Sans', sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
+body { margin: 0; min-width: 320px; background: #f7f3ee; color: #26323a; font-family: 'DM Sans', sans-serif; -webkit-font-smoothing: antialiased; }
 button, input { font: inherit; }
 button { transition: transform 160ms cubic-bezier(.23,1,.32,1), background-color 160ms ease, color 160ms ease, box-shadow 160ms ease; }
 button:active { transform: scale(.97); }
@@ -81,10 +74,23 @@ button:active { transform: scale(.97); }
 @layer components {
   .container { width: 100%; margin-left: auto; margin-right: auto; padding-left: 1rem; padding-right: 1rem; }
   .flex { min-height: 0; min-width: 0; }
+  .stat-card { border: 1px solid #e8e0d6; background: #fffdf9; border-radius: 18px; padding: 1rem; box-shadow: 0 8px 25px rgba(61,48,35,.04); }
+  .stat-card svg { height: 1.1rem; width: 1.1rem; }
+  .stat-card strong { display: block; margin-top: 1.15rem; font-family: 'Fraunces', serif; font-size: 1.75rem; line-height: 1; letter-spacing: -.04em; }
+  .stat-card span { display: block; margin-top: .375rem; color: #9a8e81; font-size: .75rem; font-weight: 500; }
 }
+
+.night-mode { background: #182126 !important; color: #f7f0e8; min-height: 100vh; }
+.night-mode .dark-panel, .night-mode .dark-header, .night-mode .dark-card, .night-mode .stat-card { border-color: #314049 !important; background-color: #223039 !important; color: #f7f0e8; }
+.night-mode .dark-header { background-color: rgba(24,33,38,.9) !important; }
+.night-mode .dark-card h1, .night-mode .dark-card h2, .night-mode .dark-card h3, .night-mode .stat-card strong, .night-mode .dark-panel p, .night-mode .dark-header p { color: #f7f0e8 !important; }
+.night-mode .dark-card .bg-\[\#fffaf1\], .night-mode .dark-card .bg-\[\#fffdf9\], .night-mode .dark-card input { background-color: #293a44 !important; }
+.night-mode .dark-card .text-\[\#6f6256\], .night-mode .dark-card .text-\[\#8e8174\], .night-mode .dark-card .text-\[\#a49384\], .night-mode .stat-card span { color: #b8c4c1 !important; }
+.night-mode .dark-track { background-color: #40515a; }
+.night-mode .dark-panel .hover\:bg-\[\#f2ebe3\]:hover { background-color: #2b3b44 !important; }
+.night-mode .bg-\[\#f7f3ee\] { background-color: #182126 !important; }
+.night-mode .bg-\[\#fbf8f4\] { background-color: #1d2a31 !important; }
 
 @media (min-width: 640px) { .container { padding-left: 1.5rem; padding-right: 1.5rem; } }
 @media (min-width: 1024px) { .container { padding-left: 2rem; padding-right: 2rem; max-width: 1280px; } }
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
-}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
