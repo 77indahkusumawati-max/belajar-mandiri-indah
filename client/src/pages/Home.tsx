@@ -13,9 +13,9 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 
-const heroImage = "/manus-storage/belajar-hero_83f85bcd.png";
-const femaleHero = "/manus-storage/belajar-hero-female_53dd9422.png";
-const cardsImage = "/manus-storage/study-cards_f4abd3e5.png";
+const heroImage = "/assets/belajar-hero.webp";
+const femaleHero = "/assets/belajar-hero-female.webp";
+const cardsImage = "/assets/study-cards.webp";
 
 type Page = "Beranda" | "Materi" | "Kuis" | "Kalender" | "Analitik" | "Progres" | "Leaderboard" | "Sertifikat" | "Riwayat AI";
 type User = { name: string; email: string; password: string; joinedAt: string; character?: "male" | "female" };
